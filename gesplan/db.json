@@ -1,0 +1,49 @@
+{
+  "fornecedores": [
+    {
+      "id": 1,
+      "nome": "Erik",
+      "email": "email1@gmail.com",
+      "telefone": "47988120642",
+      "tipoFornecedor": 1,
+      "observacao": "disc",
+      "estrela": false
+    },
+    {
+      "id": 2,
+      "nome": "João",
+      "email": "jpmfw01@gmail.com",
+      "telefone": "47988120642",
+      "tipoFornecedor": 1,
+      "observacao": "disc",
+      "estrela": true
+    },
+    {
+      "id": 3,
+      "nome": "Liza",
+      "email": "email2@gmail.com",
+      "telefone": "47988120642",
+      "tipoFornecedor": 2,
+      "observacao": "disc",
+      "estrela": false
+    },
+    {
+      "id": 4,
+      "nome": "Alessandro",
+      "email": "email3@gmail.com",
+      "telefone": "47988120642",
+      "tipoFornecedor": 3,
+      "observacao": "disc",
+      "estrela": true
+    },
+    {
+      "id": "34f8",
+      "nome": "Jonny",
+      "email": "jonny@gmail.com",
+      "telefone": "47988120642",
+      "tipoFornecedor": 2,
+      "observacao": "disc",
+      "estrela": false
+    }
+  ]
+}
