@@ -44,7 +44,11 @@
 						formControlName="supplierType"
 						class="h-8 mt-1 border-4 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 					>
-						<option *ngFor="let supplierType of enumSupplierLabel" value="{{supplierType.value}}">{{supplierType.text}}</option>
+						<option
+							*ngFor="let supplierType of enumSupplierLabel"
+							value="{{supplierType.value}}"
+							>{{supplierType.text}}</option
+						>
 					</select>
 				</div>
 			</div>
@@ -52,17 +56,19 @@
 			<label class="relative block text-sm font-medium text-gray-700">
 				Telefone
 			</label>
-			<div class="w-full flex flex-col gap-4 mb-4 border-2 border-blue-900 rounded-md p-2">
+			<div
+				class="w-full flex flex-col gap-4 mb-4 border-2 border-blue-900 rounded-md p-2"
+			>
 				<div class="w-full">
 					<div class="w-1/4">
-					<label class="block text-sm font-medium text-gray-700">
-						Telefone
-					</label>
-					<input
-						formControlName="cellphone"
-						class="h-8 mt-1 border-4 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-					/>
-				</div>
+						<label class="block text-sm font-medium text-gray-700">
+							Telefone
+						</label>
+						<input
+							formControlName="cellphone"
+							class="h-8 mt-1 border-4 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+						/>
+					</div>
 				</div>
 			</div>
 
@@ -83,12 +89,12 @@
 				</button>
 				<button
 					type="submit"
-					class="botao-submit trash bg-blue-600 hover:bg-blue-700 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+					class="botao-submit trash hover:bg-blue-700 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+					[ngClass]="{'bg-gray-700': !form.valid, 'bg-blue-600': form.valid}"
 					[disabled]="!form.valid"
-					>
+				>
 					Salvar
 				</button>
-
 			</div>
 		</form>
 	</div>
