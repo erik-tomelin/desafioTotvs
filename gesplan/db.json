@@ -1,48 +1,30 @@
 {
   "fornecedores": [
     {
-      "id": 1,
-      "nome": "Erik",
-      "email": "email1@gmail.com",
-      "telefone": "47988120642",
-      "tipoFornecedor": 1,
-      "observacao": "disc",
-      "estrela": false
-    },
-    {
-      "id": 2,
-      "nome": "João",
+      "id": "302b",
+      "name": "João",
       "email": "jpmfw01@gmail.com",
-      "telefone": "47988120642",
-      "tipoFornecedor": 1,
-      "observacao": "disc",
-      "estrela": true
-    },
-    {
-      "id": 3,
-      "nome": "Liza",
-      "email": "email2@gmail.com",
-      "telefone": "47988120642",
-      "tipoFornecedor": 2,
-      "observacao": "disc",
+      "supplierType": 1,
+      "cellphone": "4799999999",
+      "observacao": "disc joao",
       "estrela": false
     },
     {
-      "id": 4,
-      "nome": "Alessandro",
-      "email": "email3@gmail.com",
-      "telefone": "47988120642",
-      "tipoFornecedor": 3,
-      "observacao": "disc",
-      "estrela": true
+      "id": "9ad5",
+      "name": "Erik Tomelin",
+      "email": "tomelinerik@gmail.com",
+      "supplierType": "3",
+      "cellphone": "+5547988613249",
+      "observacao": "Varejista de produtos",
+      "estrela": false
     },
     {
-      "id": "34f8",
-      "nome": "Jonny",
-      "email": "jonny@gmail.com",
-      "telefone": "47988120642",
-      "tipoFornecedor": 2,
-      "observacao": "disc",
+      "id": "4853",
+      "name": "Erik Tomelin",
+      "email": "tomelinerik@gmail.com",
+      "supplierType": 0,
+      "cellphone": "+5547988613249",
+      "observacao": "",
       "estrela": false
     }
   ]

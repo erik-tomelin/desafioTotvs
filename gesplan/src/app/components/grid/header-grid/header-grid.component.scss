@@ -1,0 +1,120 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #4a90e2;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #2176c7;
+    }
+
+    &:focus {
+        outline-width: 4px;
+        outline-color: #4a90e2;
+    }
+
+    &:focus-visible {
+        outline-style: auto;
+    }
+
+    &.dark {
+        background-color: #2176c7;
+
+        &:hover {
+            background-color: #1669b8;
+        }
+
+        &:focus {
+            outline-color: #9ac4e8;
+        }
+    }
+}
+
+.edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #4a90e2;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        background-color: #165ea3;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    }
+
+    &.dark {
+        background-color: #2176c7;
+
+        &:hover {
+            background-color: #1669b8;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        }
+    }
+}
+
+.button.edit:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.trash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #4a90e2;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        background-color: #165ea3;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    }
+
+    &.dark {
+        background-color: #2176c7;
+
+        &:hover {
+            background-color: #1669b8;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        }
+    }
+}
+
+.button.trash:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}

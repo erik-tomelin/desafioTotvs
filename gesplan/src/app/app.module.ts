@@ -1,56 +1,53 @@
-// app.module.ts
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import {
-    MatDialogActions,
-    MatDialogClose, MatDialogContent, MatDialogModule, MatDialogTitle
-} from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { DesafioComponent } from './components/desafio/desafio.component';
-import { DetalhesDialog } from './components/desafio/dialogs/detalhes/detalhes-dialog.component';
-import { GridComponent } from './components/desafio/grid/grid.component';
 import { PipesModule } from './pipes/pipes.module';
 import { BaseHttp } from './shared/base-http';
+import { DesafioComponent } from './landing/desafio.component';
+import { GridComponent } from './components/grid/grid.component';
+import { HeaderGridComponent } from './components/grid/header-grid/header-grid.component';
+import { DetalhesDialog } from './components/grid/detalhes-dialog/detalhes-dialog.component';
 
 const appRoutes: Routes = [
-    { path: 'DesafioComponent', component: DesafioComponent },
-    { path: '**', redirectTo: '/DesafioComponent' }
+  { path: 'DesafioComponent', component: DesafioComponent },
+  { path: '**', redirectTo: '/DesafioComponent' },
 ];
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        DesafioComponent,
-        GridComponent,
+  declarations: [
+    AppComponent,
+    DesafioComponent,
 
-        DetalhesDialog
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        RouterModule.forRoot(appRoutes),
+    GridComponent,
+    HeaderGridComponent,
 
-        MatFormFieldModule,
-        MatInputModule,
-        FormsModule,
-        MatButtonModule,
+    DetalhesDialog,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule,
 
-        HttpClientModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
 
-        PipesModule
-    ],
-    providers: [
-        BaseHttp,
-    ],
-    bootstrap: [AppComponent],
+    HttpClientModule,
+
+    PipesModule,
+  ],
+  providers: [BaseHttp],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-    static appRoutes: Routes = appRoutes;
+  static appRoutes: Routes = appRoutes;
 }

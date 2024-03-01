@@ -1,0 +1,29 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  color: #4a90e2;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+  }
+
+  &.dark {
+    background-color: #374151;
+    border-color: #4b5563;
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+  }
+}

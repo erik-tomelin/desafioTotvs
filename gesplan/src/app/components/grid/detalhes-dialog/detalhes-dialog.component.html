@@ -1,0 +1,95 @@
+<div
+	class="fixed inset-0 z-50 overflow-auto flex items-center justify-center"
+	(click)="closeOnClickOutside($event)"
+>
+	<div class="fixed inset-0 bg-black opacity-50"></div>
+	<div class="bg-white w-1/2 p-6 rounded-lg shadow-xl relative dark:bg-white">
+		<div class="absolute top-0 right-0 mt-2 mr-2">
+			<button
+				type="button"
+				(click)="close()"
+				class="text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700"
+			>
+				<i class="fa-solid fa-times"></i>
+			</button>
+		</div>
+		<div class="flex justify-between items-center mb-4">
+			<h2 class="text-xl font-semibold">Adicionar Produto</h2>
+		</div>
+		<form [formGroup]="form" (ngSubmit)="onSubmit()">
+			<div class="w-full flex gap-4 mb-4">
+				<div class="w-1/4">
+					<label class="block text-sm font-medium text-gray-700">
+						Nome
+					</label>
+					<input
+						formControlName="name"
+						class="h-8 mt-1 border-4 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+					/>
+				</div>
+				<div class="w-1/4">
+					<label class="block text-sm font-medium text-gray-700">
+						Email
+					</label>
+					<input
+						formControlName="email"
+						class="h-8 mt-1 border-4 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+					/>
+				</div>
+				<div class="w-1/4">
+					<label class="block text-sm font-medium text-gray-700">
+						Tipo de Fornecedor
+					</label>
+					<select
+						formControlName="supplierType"
+						class="h-8 mt-1 border-4 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+					>
+						<option *ngFor="let supplierType of enumSupplierLabel" value="{{supplierType.value}}">{{supplierType.text}}</option>
+					</select>
+				</div>
+			</div>
+
+			<label class="relative block text-sm font-medium text-gray-700">
+				Telefone
+			</label>
+			<div class="w-full flex flex-col gap-4 mb-4 border-2 border-blue-900 rounded-md p-2">
+				<div class="w-full">
+					<div class="w-1/4">
+					<label class="block text-sm font-medium text-gray-700">
+						Telefone
+					</label>
+					<input
+						formControlName="cellphone"
+						class="h-8 mt-1 border-4 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+					/>
+				</div>
+				</div>
+			</div>
+
+			<div class="w-full flex gap-4 mb-4">
+				<textarea
+					placeholder="Observação"
+					formControlName="observacao"
+					class="h-20 mt-1 border-4 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+				></textarea>
+			</div>
+
+			<div class="flex justify-end gap-2">
+				<button
+					(click)="close()"
+					class="bg-gray-600 hover:bg-gray-700 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+				>
+					Cancel
+				</button>
+				<button
+					type="submit"
+					class="botao-submit trash bg-blue-600 hover:bg-blue-700 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+					[disabled]="!form.valid"
+					>
+					Salvar
+				</button>
+
+			</div>
+		</form>
+	</div>
+</div>

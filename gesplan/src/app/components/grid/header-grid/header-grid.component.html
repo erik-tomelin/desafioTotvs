@@ -1,0 +1,41 @@
+<div class="dark:bg-gray-800 relative shadow-md overflow-hidden">
+	<div
+		class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4"
+	>
+		<div
+			class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0"
+		>
+			<button type="button" class="button py-3 px-6" (click)="openModal(enumCrudOperation.add)">
+				<i class="pr-2 fa-solid fa-plus"></i>
+				Novo
+			</button>
+
+			<button
+				type="button"
+				class="button edit"
+				[ngClass]="{'bg-gray-700': disabled}"
+				[disabled]="disabled && listSelected.length !== 1"
+				(click)="openModal(enumCrudOperation.edit)"
+			>
+				<i class="fa-regular fa-pen-to-square"></i>
+			</button>
+
+			<button
+				type="button"
+				class="button trash"
+				[ngClass]="{'bg-gray-700': disabled}"
+				[disabled]="disabled"
+				(click)="deleteSupplier()"
+			>
+				<i class="fa-solid fa-trash"></i>
+			</button>
+		</div>
+	</div>
+</div>
+
+<app-detalhes-dialog
+	#modal
+	*ngIf="modalAberta"
+	[listSelected]="listSelected"
+	(closeModal)="closeModal()"
+></app-detalhes-dialog>
