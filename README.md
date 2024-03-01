@@ -1,8 +1,6 @@
 # Desafio Totvs
 
-Este projeto é parte de um desafio para uma seleção na empresa [Nome da Empresa].
-
-## Configuração
+## Configuração iniciais
 
 Para rodar o projeto localmente, siga os passos abaixo:
 
@@ -29,9 +27,3 @@ Para rodar o projeto localmente, siga os passos abaixo:
     ```
     npm start
     ```
-
-    Certifique-se de ter todas as dependências Angular instaladas.
-
-## Contribuição
-
-Se você deseja contribuir com este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
